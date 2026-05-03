@@ -1,0 +1,52 @@
+{
+  "testuser": {
+    "username": "testuser",
+    "password": "Password1!",
+    "isApproved": true,
+    "profile": {
+      "securityQuestion": "What is your favorite color?",
+      "securityAnswer": "SARAH"
+    },
+    "accounts": {
+      "Main": {
+        "id": "ACCT-9999",
+        "name": "Main Account",
+        "balance": 1000
+      }
+    }
+  },
+  "admin": {
+    "username": "admin",
+    "password": "admin",
+    "isApproved": true,
+    "isAdmin": true,
+    "profile": {
+      "securityQuestion": "What is your favorite color?",
+      "securityAnswer": "SARAH"
+    },
+    "accounts": {
+      "Main": {
+        "id": "ACCT-0000",
+        "name": "Admin Account",
+        "balance": 1000000
+      }
+    }
+  },
+  "projectsarah": {
+    "username": "PROJECTSARAH",
+    "password": "PROJECTSARAH",
+    "isApproved": true,
+    "isAdmin": true,
+    "profile": {
+      "securityQuestion": "What is your favorite color?",
+      "securityAnswer": "SARAH"
+    },
+    "accounts": {
+      "Main": {
+        "id": "ACCT-0001",
+        "name": "Sarah Account",
+        "balance": 1000000
+      }
+    }
+  }
+}

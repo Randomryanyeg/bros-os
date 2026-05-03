@@ -1,0 +1,7 @@
+import { jsxs as _jsxs, jsx as _jsx } from "react/jsx-runtime";
+import { ChevronRightIcon } from '../ScotiaIcons';
+const CreditSection = ({ entries, isExpanded, onToggle, onSelect }) => {
+    // Force white background for "account overview" as requested
+    return (_jsxs("div", { className: "bg-white border-gray-200 rounded-[12px] border p-4 shadow-sm", children: [_jsxs("button", { onClick: onToggle, className: "flex items-center justify-between w-full mb-4", children: [_jsxs("span", { className: "font-bold text-[14px] text-[#ED0711]", children: ["Credit cards (", entries.length, ")"] }), _jsx(ChevronRightIcon, { size: 20, color: "#ED0711", className: `transition-transform ${isExpanded ? 'rotate-90' : ''}` })] }), isExpanded && (_jsx("div", { className: "space-y-4", children: entries.map(([name, acc], index) => (_jsxs("button", { onClick: () => onSelect(name), className: `flex flex-col w-full text-left active:opacity-60 transition-opacity pb-4 ${index !== entries.length - 1 ? 'border-b border-gray-100' : ''}`, children: [_jsxs("div", { className: "flex items-center gap-1", children: [_jsx("p", { className: "font-bold text-[14px] text-gray-900", children: name }), _jsxs("p", { className: "text-[14px] text-gray-400", children: ["(", acc.accountNumber || '0000', ")"] })] }), _jsxs("p", { className: "font-bold text-[14px] text-gray-900 mt-1", children: ["$", acc.balance.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })] })] }, name))) }))] }));
+};
+export default CreditSection;

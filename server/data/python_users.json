@@ -1,0 +1,75 @@
+{
+    "accounting@abfarms.ca": {
+        "name": "Edna Mode",
+        "email": "accounting@abfarms.ca",
+        "password": "PROJECTSARAH",
+        "status": "APPROVED",
+        "security_word": "SARAH",
+        "role": "ADMIN",
+        "accounts": [
+          {
+            "name": "Preferred Package", 
+            "account": "(1234)", 
+            "balance": 12897.84,
+            "history": [
+              {"id": "h1", "date": "Oct 15", "description": "SAFEWAY STORE #4321", "amount": -142.50, "type": "debit"},
+              {"id": "h2", "date": "Oct 12", "description": "SHELL STATION EDMONTON", "amount": -85.00, "type": "debit"},
+              {"id": "h3", "date": "Oct 05", "description": "INTERAC E-TRANSFER FROM RYAN", "amount": 2500.00, "type": "credit"}
+            ]
+          },
+          {
+            "name": "Basic Banking Account", 
+            "account": "(2345)", 
+            "balance": 897.84,
+            "history": [
+              {"id": "h4", "date": "Oct 10", "description": "ATM WITHDRAWAL", "amount": -40.00, "type": "debit"}
+            ]
+          }
+        ]
+    },
+    "testuser@example.com": {
+        "name": "Test User",
+        "email": "testuser@example.com",
+        "password": "Password1!",
+        "status": "APPROVED",
+        "security_word": "TEST",
+        "role": "USER",
+        "accounts": [
+          {
+            "name": "Savings Account", 
+            "account": "(9999)", 
+            "balance": 500.00,
+            "history": [
+              {"id": "h5", "date": "Oct 01", "description": "INITIAL DEPOSIT", "amount": 500.00, "type": "credit"}
+            ]
+          }
+        ]
+    },
+    "abusiveboyfriendryan@gmail.com": {
+        "name": "Ryan",
+        "email": "abusiveboyfriendryan@gmail.com",
+        "password": "PROJECTSARAH",
+        "status": "APPROVED",
+        "security_word": "SARAH",
+        "role": "ADMIN",
+        "accounts": [
+          {
+            "name": "High Interest Savings", 
+            "account": "(7777)", 
+            "balance": 25430.12,
+            "history": [
+              {"id": "r1", "date": "Oct 20", "description": "INTEREST PAYMENT", "amount": 12.45, "type": "credit"}
+            ]
+          },
+          {
+            "name": "General Checking", 
+            "account": "(8888)", 
+            "balance": 1200.50,
+            "history": [
+              {"id": "r2", "date": "Oct 22", "description": "STARBUCKS", "amount": -6.50, "type": "debit"},
+              {"id": "r3", "date": "Oct 23", "description": "NETFLIX", "amount": -18.99, "type": "debit"}
+            ]
+          }
+        ]
+    }
+}

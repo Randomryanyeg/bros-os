@@ -1,0 +1,27 @@
+:root {
+  --bg-app: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --bg-header: #FFFFFF;
+  --bg-input: #FFFFFF;
+  --bg-muted: #F9FAFB;
+  --text-main: #1A1A1A;
+  --text-muted: #666666;
+  --border-main: rgba(0, 0, 0, 0.1);
+  --scotia-red: #ED0711;
+  --success: #059669;
+  --warning: #D97706;
+}
+
+.dark {
+  --bg-app: #121212;
+  --bg-card: #1E1E1E;
+  --bg-header: #1E1E1E;
+  --bg-input: #1E1E1E;
+  --bg-muted: rgba(255, 255, 255, 0.05);
+  --text-main: #FFFFFF;
+  --text-muted: #A0A0A0;
+  --border-main: rgba(255, 255, 255, 0.1);
+  --scotia-red: #ED0711;
+  --success: #34D399;
+  --warning: #FBBF24;
+}

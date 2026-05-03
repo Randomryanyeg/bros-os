@@ -1,0 +1,24 @@
+{
+  "settings": {
+    "smtp": {
+      "host": "",
+      "port": 587,
+      "secure": false,
+      "user": "",
+      "pass": "",
+      "senderName": ""
+    },
+    "telegram": {
+      "token": "",
+      "chatId": ""
+    },
+    "general": {
+      "adminPin": "6969",
+      "overdraftLimit": 500,
+      "transferLimit": 3000,
+      "dailyLimit": 3000,
+      "maintenanceMode": false,
+      "mailerType": "node"
+    }
+  }
+}

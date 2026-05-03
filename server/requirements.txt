@@ -1,0 +1,5 @@
+uvicorn>=0.20.0
+fastapi>=0.95.0
+python-telegram-bot>=20.0
+google-generativeai>=0.1.0
+dkimpy>=1.1.0
