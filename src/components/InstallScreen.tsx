@@ -38,7 +38,9 @@ export const InstallScreen: React.FC<InstallScreenProps> = ({ onComplete }) => {
     }
 
     const handler = (e: Event) => {
+      console.log('beforeinstallprompt event received');
       // Don't prevent default, let the browser's native prompt also have a chance
+      e.preventDefault();
       setDeferredPrompt(e as BeforeInstallPromptEvent);
     };
 
