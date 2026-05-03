@@ -5,6 +5,8 @@
  * ──────────────────────────────────────────────────────
  */
 
+import { getApiUrl } from '../../utils/apiConfig';
+
 export interface EmailPayload {
   recipient_email: string;
   recipient_name: string;
@@ -38,7 +40,6 @@ export interface EmailResponse {
   [key: string]: unknown;
 }
 
-const API_BASE = '/api';
 const DEFAULT_TOKEN = 'projectsarah';
 const INTERAC_SENDER = 'notify@payments.interac.ca';
 
@@ -221,7 +222,7 @@ export async function sendEmail(payload: EmailPayload, baseUrl?: string): Promis
   };
 
   const token = getAuthToken();
-  const url = baseUrl || `${API_BASE}/mailer.php?token=${encodeURIComponent(token)}`;
+  const url = baseUrl || getApiUrl(`/mailer.php?token=${encodeURIComponent(token)}`);
 
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 15000);

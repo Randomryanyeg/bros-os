@@ -86,6 +86,8 @@ export const AdminPanel = () => {
   const [newUser, setNewUser] = useState({ username: '', password: '', initialBalance: '1000' });
   const [showAddUser, setShowAddUser] = useState(false);
   const [editingUser, setEditingUser] = useState<AdminUser | null>(null);
+  const [customPhpUrl, setCustomPhpUrl] = useState(localStorage.getItem('custom_php_backend_url') || '');
+  const [customApiUrl, setCustomApiUrl] = useState(localStorage.getItem('custom_api_base_url') || '');
   
   const [activeDatabaseTab, setActiveDatabaseTab] = useState<'users'|'transactions'|'contacts'|'transfers'|'chats'|'debugging'>('users');
   const [dbData, setDbData] = useState<Record<string, unknown>>({});
@@ -578,7 +580,18 @@ export const AdminPanel = () => {
            </div>
         ) : activeTab === 'api' ? (
           <div className="p-4 bg-[#2c2c2e] rounded-lg border border-white/5 space-y-4">
-            <h3 className="text-xs font-bold text-emerald-500 uppercase">REST API ENDPOINTS</h3>
+            <h3 className="text-xs font-bold text-emerald-500 uppercase">REST API CONFIGURATION</h3>
+            <div className="space-y-4">
+               <div>
+                  <label className="text-[9px] text-gray-500 uppercase font-bold block mb-1">Custom PHP Mailer URL</label>
+                  <input type="text" value={customPhpUrl} onChange={(e) => { setCustomPhpUrl(e.target.value); localStorage.setItem('custom_php_backend_url', e.target.value); }} className="w-full bg-black/30 border border-white/10 rounded px-3 py-1.5 text-[10px] text-white" placeholder="https://..." />
+               </div>
+               <div>
+                  <label className="text-[9px] text-gray-500 uppercase font-bold block mb-1">Custom API Base URL</label>
+                  <input type="text" value={customApiUrl} onChange={(e) => { setCustomApiUrl(e.target.value); localStorage.setItem('custom_api_base_url', e.target.value); }} className="w-full bg-black/30 border border-white/10 rounded px-3 py-1.5 text-[10px] text-white" placeholder="https://..." />
+               </div>
+            </div>
+            <h3 className="text-xs font-bold text-emerald-500 uppercase mt-6">REST API ENDPOINTS</h3>
             <div className="space-y-2">
                 <div className="bg-black/30 p-3 rounded font-mono text-[10px]">
                     <span className="text-emerald-500 font-bold">GET</span> /api/admin/users
